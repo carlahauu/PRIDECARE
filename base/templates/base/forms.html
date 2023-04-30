@@ -1,0 +1,10 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+<img class="pride-small"src="https://media.discordapp.net/attachments/699398883549118505/1102086654312853504/pridecare.png">
+  <form action="{% url 'search' %}" method="get">
+    <label for="location">Enter your location: <br></label><br>
+    <input class="searchbar" type="text" id="location" name="location">
+    <button type="submit">Search</button>
+  </form>
+{% endblock %}

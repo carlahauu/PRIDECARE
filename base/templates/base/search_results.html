@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+  <div class="container">
+
+    {% if results %}
+      <h1>Search Results:</h1>
+      <div class="row">
+        {% for result in results %}
+          <div class="col-md-4">
+            <div class="card mb-4 box-shadow">
+              {% if result.photos %}
+                <img class="card-img-top" src="{{ result.photos }}" alt="{{ result.name }}">
+              {% endif %}
+              <div class="card-body">
+                <h3>{{ result.name }}</h3>
+                <p>{{ result.vicinity }}</p>
+                {% if result.rating %}
+                  <p><strong>Rating:</strong> {{ result.rating }}</p>
+                {% endif %}
+         
+                  <p><strong>Reviews:</strong></p>
+                  <ul>
+                    {% for review in result.reviews %}
+                      <div class="review">
+                          <p class="review-author">{{ review.author_name }}</p>
+                          <p class="review-rating">{{ review.rating }}/5</p>
+                          <p class="review-text">{{ review.text }}</p>
+                      </div>
+                    {% endfor %}
+                  </ul>
+               
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <h1>No results found.</h1>
+    {% endif %}
+  </div>
+{% endblock %}
