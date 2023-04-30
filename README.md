@@ -1,5 +1,6 @@
 # PRIDECARE | TechTogether Digital Hackathon Submission 
 ![alt](https://media.discordapp.net/attachments/407710496670875661/1102145356432674866/image.png)
+Video Demo: https://youtu.be/TnmQkiymwf0
 ## Inspiration
 Our inspiration for PRIDECARE came from a desire to make it easier for members of the LGBTQ+ community and or those that identify as a gender minority to find healthcare providers who are welcoming and understanding of their specific needs. I wanted to create a tool that would help connect members of this community with providers who will offer compassionate and inclusive care.
 
